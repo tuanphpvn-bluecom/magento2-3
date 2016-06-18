@@ -114,7 +114,7 @@ class PaymentMethod
         $customerEmail = $this->_checkoutSession->getLastRealOrder()->getCustomerEmail();
 
         // If Guest
-        if ($customerName == 'Guest') {
+        if ($customerName == __('Guest')) {
             $address = $this->getBillingAddress();
             $customerName = $address->getFirstname().' '.$address->getLastname();
         }
